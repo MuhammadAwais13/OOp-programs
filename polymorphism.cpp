@@ -12,6 +12,8 @@ using namespace std;
         // _---> in run time no binding occurs during compile time 
         // --> type of function run is decided at run time or binding occur during run time 
         // compiler decide during run time which function mus be binded to func call
+        // it does not mean that decision is takken at run time ... no it means that 
+        // adress of one thing is binded with other durinng run time 
 
 // int main()
 // {
