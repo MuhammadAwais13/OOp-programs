@@ -31,7 +31,7 @@ class Derived1 : private  Base // all types of members of base class are
 {
 public:
    
-    int shuw2()
+    int shuw2()// we can only initialize varible of parent class using function but we cannot do it using constructor as constructor only initialize member varibles of same class 
     {
         c=30; //to assign a value to a veriable of base class we cannot do without using function we need a function to do this job 
         cout << "from base :" << c<<c<<a; //privet a of base is inaccessible

@@ -1,5 +1,5 @@
 // abstract base class is a class whose sole purpose is to make new class.
-//it contain real virtual function
+// it contain real virtual function
 // we cannot creat object of abstract class as it is only created to make new classes 
 #include<iostream>
 using namespace std;

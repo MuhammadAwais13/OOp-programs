@@ -5,7 +5,7 @@ using namespace std;
 class base_class{
     public:
  int B_value;
- void display(){
+ void  display(){
     cout<<"calling from base class "<<endl;
  }
 };
@@ -28,9 +28,9 @@ int main()
                                    //deciding which function is to be connected with this pointer. 
                                    // if it was not pointer and simple display call using base obj then it would 
                                    // hav been decided during compile time
-    Derived* D2;
-    base_class B1;
-    D2=&B1;                        // now we cannot use same procedure for base to derived 
+   //  Derived* D2;
+   //  base_class B1;
+   //  D2=&B1;                        // now we cannot use same procedure for base to derived 
                                    // as we cannot assign a parent to its son 
                                    // while in upper case we can assign a son to parrent                                         
  return 0;

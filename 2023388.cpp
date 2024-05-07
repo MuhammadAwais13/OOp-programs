@@ -13,18 +13,18 @@ using namespace std;
 class Animal {
 public:
     // Constructor to initialize name and age
-    Animal(const char* n, int a) : name(n), age(a) {}
+    Animal(const char n, int a) : name(n), age(a) {}
 
     //  virtual function makeSound() makes Animal an abstract class
-    virtual void makeSound() const = 0;
+    virtual void makeSound() = 0;
 
    
-    virtual void displayInfo() const {
+    virtual void displayInfo()  {
         cout << "Name: " << name << ", Age: " << age << ", Type: Animal" << endl;
     }
 
 protected:
-    const char* name;
+    const char name;
     int age;
 };
 
@@ -32,15 +32,15 @@ protected:
 class Dog : public Animal {
 public:
     // Constructor to initialize Dog 
-    Dog(const char* n, int a) : Animal(n, a) {}
+    Dog(const char n, int a) : Animal(n, a) {}
 
     
-    void makeSound() const override {
+    void makeSound()  {
         cout << "Woof! Woof!" << endl;
     }
 
     // Override displayInfo() to display Dog information
-    void displayInfo() const override {
+    void displayInfo()  {
         cout << "Name: " << name << ", Age: " << age << ", Type: Dog" << endl;
     }
 };
@@ -49,15 +49,15 @@ public:
 class Cat : public Animal {
 public:
     // Constructor to initialize Cat with name and age
-    Cat(const char* n, int a) : Animal(n, a) {}
+    Cat(const char n, int a) : Animal(n, a) {}
 
     // Implement makeSound() for Cat
-    void makeSound() const override {
+    void makeSound()  {
         cout << "Meow!" << endl;
     }
 
     // Override displayInfo() to display Cat information
-    void displayInfo() const override {
+    void displayInfo()  {
         cout << "Name: " << name << ", Age: " << age << ", Type: Cat" << endl;
     }
 };
@@ -66,24 +66,24 @@ public:
 class Bird : public Animal {
 public:
     // Constructor to initialize Bird with name and age
-    Bird(const char* n, int a) : Animal(n, a) {}
+    Bird(const char n, int a) : Animal(n, a) {}
 
     // Implement makeSound() for Bird
-    void makeSound() const override {
+    void makeSound()  {
         cout << "Chirp! Chirp!" << endl;
     }
 
     // Override displayInfo() to display Bird information
-    void displayInfo() const override {
+    void displayInfo()  {
         cout << "Name: " << name << ", Age: " << age << ", Type: Bird" << endl;
     }
 };
 
 int main() {
     // Create instances of Dog, Cat, and Bird
-    Dog buddy("Buddy", 3);
-    Cat whiskers("Whiskers", 5);
-    Bird polly("Polly", 2);
+    Dog buddy('Buddy', 3);
+    Cat whiskers('Whiskers', 5);
+    Bird polly('Polly', 2);
 
     // Store pointers to animals in an array
     Animal* animals[3] = {&buddy, &whiskers, &polly};
