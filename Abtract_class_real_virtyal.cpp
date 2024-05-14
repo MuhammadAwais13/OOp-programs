@@ -6,6 +6,7 @@ using namespace std;
 class base_class{
     public:
  int B_value;
+
  virtual void display()=0;     //  now this is a do nothing virtual function whose sole purpose is to 
                                // make display or call diplay in derived class with same name when its pointer
                                // containing adress of derived calls display 
@@ -21,7 +22,7 @@ class Derived : public base_class{
     public:
  int D_value;
  void display(){           
-    cout<<"calling from derived class : "<<endl;
+    cout<<"calling from derived class : "<<B_value<<endl;
  }
 };
 class Derived2 : public base_class{

@@ -1,98 +1,65 @@
-// reg no 2023388 
+// reg no 2023388
 // name muhammad Awais Ashraf
 // section AI(F)
-
-
-
-
 #include <iostream>
-
 using namespace std;
 
-// Base class 
-class Animal {
+class Area
+{
+private:
+    double length;
+    double width;
+
 public:
-    // Constructor to initialize name and age
-    Animal(const char n, int a) : name(n), age(a) {}
-
-    //  virtual function makeSound() makes Animal an abstract class
-    virtual void makeSound() = 0;
-
-   
-    virtual void displayInfo()  {
-        cout << "Name: " << name << ", Age: " << age << ", Type: Animal" << endl;
+    // Constructor with no arguments
+    Area() : length(20), width(15)
+    {
+        cout << "Welcome to Area Class." << endl;
     }
 
-protected:
-    const char name;
-    int age;
-};
-
-// Derived class Dog 
-class Dog : public Animal {
-public:
-    // Constructor to initialize Dog 
-    Dog(const char n, int a) : Animal(n, a) {}
-
-    
-    void makeSound()  {
-        cout << "Woof! Woof!" << endl;
+    // Copy constructor that adds 5 to both length and width
+    Area(const Area &obj)
+    {
+        length = obj.length + 5;
+        width = obj.width + 5;
     }
 
-    // Override displayInfo() to display Dog information
-    void displayInfo()  {
-        cout << "Name: " << name << ", Age: " << age << ", Type: Dog" << endl;
-    }
-};
+    // Constructor with two integer arguments
+    Area(int l, int w) : length(l), width(w) {}
 
-// Derived class Cat from Animal
-class Cat : public Animal {
-public:
-    // Constructor to initialize Cat with name and age
-    Cat(const char n, int a) : Animal(n, a) {}
+    // Constructor with two double arguments
+    Area(double l, double w) : length(l), width(w) {}
 
-    // Implement makeSound() for Cat
-    void makeSound()  {
-        cout << "Meow!" << endl;
+    // Function to calculate the area
+    double Calculate()
+    {
+        return length * width;
     }
 
-    // Override displayInfo() to display Cat information
-    void displayInfo()  {
-        cout << "Name: " << name << ", Age: " << age << ", Type: Cat" << endl;
+    // Function to display the dimensions and area
+    void Display()
+    {
+        cout << "Length: " << length << ", Width: " << width << ", Area: " << Calculate() << endl;
     }
 };
 
-// Derived class Bird from Animal
-class Bird : public Animal {
-public:
-    // Constructor to initialize Bird with name and age
-    Bird(const char n, int a) : Animal(n, a) {}
+int main()
+{
+    // Using constructor with no arguments
+    Area area1;
+    area1.Display();
 
-    // Implement makeSound() for Bird
-    void makeSound()  {
-        cout << "Chirp! Chirp!" << endl;
-    }
+    // Using copy constructor
+    Area area2(area1);
+    area2.Display();
 
-    // Override displayInfo() to display Bird information
-    void displayInfo()  {
-        cout << "Name: " << name << ", Age: " << age << ", Type: Bird" << endl;
-    }
-};
+    // Using constructor with two integer arguments
+    Area area3(10, 25);
+    area3.Display();
 
-int main() {
-    // Create instances of Dog, Cat, and Bird
-    Dog buddy('Buddy', 3);
-    Cat whiskers('Whiskers', 5);
-    Bird polly('Polly', 2);
-
-    // Store pointers to animals in an array
-    Animal* animals[3] = {&buddy, &whiskers, &polly};
-
-    // Iterate through the array and call makeSound() and displayInfo() for each animal
-    for (Animal* a : animals) {
-        a->makeSound();
-        a->displayInfo();
-    }
+    // Using constructor with two double arguments
+    Area area4(12.5, 20.3);
+    area4.Display();
 
     return 0;
 }

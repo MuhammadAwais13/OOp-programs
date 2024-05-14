@@ -64,6 +64,6 @@ int main()
     // D1.show();
     D1.shuw2();
     Derived3 D3;
-    D3.show3(); // so we can call show 3 bot we cannot call c or e as they are protected
+    D3.show3(); // so we can call show 3 but we cannot call c or e as they are protected
     return 0;
 }
