@@ -1,0 +1,24 @@
+constructors
+parimeterized
+default
+copy
+this
+functions 
+friend functions(
+   1- parimeterized constructors ------- No we cannot make it or use it with friend keywoord
+   2- default  constructors ------- No we cannot make it or use it with friend keywoord
+   3-  copy constructors ------- No we cannot make it or use it with friend keywoord
+   4- this pointer ----------- no we cannot use this pointer with friend keyword as they both serve different purposses
+    ) 
+Static keyword(
+    1- constructors [no we cannot use them together]
+    2- this [no we cannot use static with this keyword]
+    3- function [ yes we can make as static function ]
+    4- friends function [no we cannot use both keyword togather done in static cpp file]
+    )
+const keyword( file practice_const
+    1- constructors [no we cannot do that as cpp dosenot allow us to make constructor const ]
+    2- functions [yes we can make function const]
+    3- friends [no we cannot make friend function const reson in cpp file ]
+    4- static []
+)    

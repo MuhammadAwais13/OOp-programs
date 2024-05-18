@@ -13,7 +13,7 @@ of a1 using a3 its invalid as a1 is still constant */
     int* a3=const_cast<int*>(a2);
     *a3=30; //invalid 
 /* to end above problem a1 is made non const*/
-    const int a1 =10 ;
+     int a1 =10 ;
     const int* a2=&a1;
     int* a3=const_cast<int*>(a2);
     *a3=30;

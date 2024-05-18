@@ -1,72 +1,106 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-
-class Arrays
-{
-private:
-    int *array1;
-    int *array2;
-    int size;
-
-public:
-    // Constructor that accepts two arrays as arguments
-    Arrays(int arr1[], int arr2[], int arrSize) : size(arrSize)
-    {
-        array1 = new int[size];
-        array2 = new int[size];
-        for (int i = 0; i < size; ++i)
-        {
-            array1[i] = arr1[i];
-            array2[i] = arr2[i];
-        }
+#include<vector>
+class Product{
+    public:
+    string name;
+    float price;
+    int quantity;
+    Product(string a,float b , int c):name(a),price(b),quantity(c){}
+    virtual float T_price()=0;
+    void get_data(string a,float b , int c){
+        name=a;
+        price=b;
+        quantity=c;
     }
-
-    // Copy constructor that copies the first array to both dynamic arrays
-    Arrays(int arr[], int arrSize) : size(arrSize)
-    {
-        array1 = new int[size];
-        array2 = new int[size];
-        for (int i = 0; i < size; ++i)
-        {
-            array1[i] = arr[i];
-            array2[i] = arr[i];
-        }
-    }
-
-    // Function to calculate and display the sum of each array
-    void Sum()
-    {
-        int sum1 = 0, sum2 = 0;
-        for (int i = 0; i < size; ++i)
-        {
-            sum1 += array1[i];
-            sum2 += array2[i];
-        }
-        cout << "Sum of array1: " << sum1 << endl;
-        cout << "Sum of array2: " << sum2 << endl;
-    }
-
-    // Destructor to free up dynamic memory
-    ~Arrays()
-    {
-        delete[] array1;
-        delete[] array2;
-    }
+    // {
+    //     cout<<" Name "<<name<<" price is : "<<price<<" Quantity is : "<<quantity<<endl;
+    // }
 };
+class Electronics: public Product{
+    public:
+    Electronics(string a,float b , int c):Product(a,b,c){}
+    float total_price;
+    float T_price(){
+        total_price=quantity*price;
+        cout<<"total price is :"<<total_price<<endl;
+        return total_price;
 
+    }
+
+} ;
+class Cloathing: public Product{
+    public:
+    Cloathing(string a,float b , int c):Product(a,b,c){}
+    float total_price2;
+    float T_price(){
+        float dis=quantity*price*0.1;
+        total_price2=quantity*price-dis;
+        return total_price2;
+        
+
+    }
+
+} ;
+class Customer{
+    public:
+    string name;
+    string contact_num;
+    string Loyality_level;
+    Customer(string a,string b,string c):name(a),contact_num(b),Loyality_level(c){}
+    void get_name(string a){
+        name=a;    
+    }
+    void get_contact(string a){
+        contact_num=a;
+    }
+    void get_loyality(string a){
+        Loyality_level=a;
+    }
+    
+
+};
+class Billing{
+    public:
+    vector<Product*> cart;
+    void add_product(Product* product){
+        cart.push_back(product);
+    }
+    float cal_total_bill(){
+        float T[2];
+        for (int  i = 0; i < cart.size(); i++)
+        {
+            /* code */
+            T[i]=cart[i]->T_price();
+        }
+        float totals =T[0]+T[1];
+        return totals;
+        
+    }
+    void generate_recipt(Customer& customer){
+            
+    }
+
+};
 int main()
-{
-    const int size = 10;
-    int arr1[size] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int arr2[size] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+{   Cloathing C1("shiry",12,2);
+    Electronics E1("car",122,3);
+    Product* p1[2];
+    Customer Cu("joe","20909888","Gold");
+    Billing B1;
+    p1[0]=&C1;
+    p1[1]=&E1;
 
-    // Using the first constructor
-    Arrays arrays1(arr1, arr2, size);
-    arrays1.Sum();
+    for (int i = 0; i < 2; i++)
+    {
+        /* code */
+        
+        B1.add_product(p1[i]);
+        
+        
 
-    // Using the copy constructor
-    Arrays arrays2(arr1, size);
-    arrays2.Sum();
-
-    return 0;
+    }
+    cout<<B1.cal_total_bill();
+    
+ return 0;
 }

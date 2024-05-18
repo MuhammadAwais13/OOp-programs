@@ -16,6 +16,11 @@ class Base{
     void showw(){};
 };
 class derived : public Base{
+    public:
+    
+    virtual void show(){
+        cout<<"derived";
+    }
 
 };
 using namespace std;

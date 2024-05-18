@@ -1,6 +1,7 @@
 // abstract base class is a class whose sole purpose is to make new class.
 // it contain real virtual function
 // we cannot creat object of abstract class as it is only created to make new classes 
+//but we can create pointer of abstract class 
 #include<iostream>
 using namespace std;
 class base_class{
