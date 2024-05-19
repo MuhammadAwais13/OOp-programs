@@ -20,5 +20,17 @@ const keyword( file practice_const
     1- constructors [no we cannot do that as cpp dosenot allow us to make constructor const ]
     2- functions [yes we can make function const]
     3- friends [no we cannot make friend function const reson in cpp file ]
-    4- static []
-)    
+    4- static [no we cannot make aa static membere function constant]
+    )
+operator overloading(
+    
+    )
+Inheritance( find practice_inheritance.cpp
+    1- constructors [yes we can inherit constructors]
+    2- functions [yes we can]
+    3- friends functions [onle if that func is friend of base and derived both]
+    4- static [i can inherit static members in derived and use them]
+    5- const [we can inherit const variables ]
+
+    )
+

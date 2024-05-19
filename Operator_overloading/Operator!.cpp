@@ -8,11 +8,11 @@
 //     int count2;
 //     student(int a, int b) : count(a), count2(b) {}
 //     student() {}
-//     student operator++()
+//     student operator ++()
 //     {
 //         student temp;
-//         temp.count = count++;
-//         temp.count2 = count2++;
+//         temp.count = ++count;
+//         temp.count2 = ++count2;
 //         return temp; // we have created temp so that it can return both variables
 //     }
 //     // student &operator++()
@@ -99,36 +99,34 @@
 //     }
 // }
 
-
-
 //-------------------------------------------------------------------------//
 
 //                     input/output operators                              //
 
-
-#include <iostream>
-using namespace std;
-class student
-{
-private:
-public:
-    int count;
-    int count2;
-    student(int a, int b) : count(a), count2(b) {}
-    student() {}
-    friend ostream &operator<<(ostream &display,const student& a1){
-        display<<a1.count2<<a1.count;
-        return display;
-
-    }
-    friend istream &operator>>(istream &input, student&a2){
-        input>>a2.count2>>a2.count;
-        return input;
-    }
-};
-int main()
-{
-    student S1,S2;
-    cin>>S1;
-    cout<<"answer is "<<S1;
-}
+// #include <iostream>
+// using namespace std;
+// class student
+// {
+// private:
+// public:
+//     int count;
+//     int count2;
+//     student(int a, int b) : count(a), count2(b) {}
+//     student() {}
+//     friend ostream &operator<<(ostream &display, const student &a1)
+//     {
+//         display << a1.count2 << a1.count;
+//         return display;
+//     }
+//     friend istream &operator>>(istream &input, student &a2)
+//     {
+//         input >> a2.count2 >> a2.count;
+//         return input;
+//     }
+// };
+// int main()
+// {
+//     student S1, S2;
+//     cin >> S1;
+//     cout << "answer is " << S1;
+// }

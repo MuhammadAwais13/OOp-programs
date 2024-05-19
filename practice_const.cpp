@@ -100,4 +100,31 @@
 
 //===============================================
 
-//
+//static with const
+
+//===============================================
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// class student
+// {public:
+//     const int marks = 1;
+//     int reg;
+
+// public:
+//     student(int a) : reg(a) {} 
+//     static void addvar()const;    //so we cannot make a static function constant as type qualifier is not allowod with static  
+// };
+// void student :: addvar()const{
+//     cout<<"static func called :"<<endl;
+// }
+
+// int main()
+// {
+//     student S1(2332);
+//     S1.addvar();
+//     return 0;
+// }
