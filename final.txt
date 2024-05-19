@@ -33,4 +33,19 @@ Inheritance( find practice_inheritance.cpp
     5- const [we can inherit const variables ]
 
     )
+overriding(
+    1- inheritance [yes we can do ]
+    2- constructor [yes we can do constructor ---- file practice_overriding]
+    3- functions [yes we can override functions]
+    4- friend function [no we cannot override friend function as they are not part of single class]
+    5- static functions [yes we can override static variables and functions ]
+    6- const functions [yes we can ]
+    7- operator overloading [ yes we can having same operator but different data type ]
+)    
 
+virtual (
+    1- inheritance [yes we can do ]
+    2- constructors [no we cannot use virtual and constructor word togather]
+    3- friends [no we cannot write them togather]
+    
+)
