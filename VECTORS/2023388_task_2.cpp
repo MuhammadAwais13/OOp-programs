@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 #include<vector>
+#include <stack>
 class Product{
     public:
     string name;
@@ -68,22 +69,24 @@ class Billing{
     }
     float cal_total_bill(){
         float T[2];
-        for (int  i = 0; i < cart.size(); i++)
+        float tot=0.0;
+        vector<Product*>::iterator itr=cart.begin();
+        for (itr=cart.begin(); itr!=cart.end(); itr++)
         {
             /* code */
-            T[i]=cart[i]->T_price();
+            tot+=(*itr)->T_price();
         }
-        float totals =T[0]+T[1];
-        return totals;
+        
+        return tot;
         
     }
-    void generate_recipt(Customer& customer){
-            
-    }
+    
 
 };
 int main()
-{   Cloathing C1("shiry",12,2);
+{   
+    // stack<Product*>cart;
+    Cloathing C1("shiry",12,2);
     Electronics E1("car",122,3);
     Product* p1[2];
     Customer Cu("joe","20909888","Gold");

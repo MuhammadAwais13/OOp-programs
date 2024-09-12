@@ -23,7 +23,7 @@ int main()
     Student S1(2023388, 1223), S3;
     S3 = S1; // this calls assignment operator as assignme nt aoperator is not created in this so it will make a default operator of assignment and copies content of all
     S3.Show();
-    Student S2 = S1;  // here assignment operator is not called bit copy constructor is called 
+    Student S2 = S1;  // here assignment operator is not called but copy constructor is called 
     S2.Show();
     return 0;
 }

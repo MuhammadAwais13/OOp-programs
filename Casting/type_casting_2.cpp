@@ -5,7 +5,7 @@ syntax dybamic_cast <type >(expression)
 // this is only used when we deal with polymorphic inheritance means base class must contain virtual function
 in this we MAKE base class a pinter and check weather it points to derived class or not if it points to derived class
 then its done right 
-as we know a base class cant point to derived class but if we make virtual function base then it can point to derived class
+as we know a base class cant point to derived class but if we make virtual function in base then it can point to derived class
 
 */ 
 

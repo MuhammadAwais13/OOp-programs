@@ -5,12 +5,12 @@ copy
 this
 functions 
 friend functions(
-   1- parimeterized constructors ------- No we cannot make it or use it with friend keywoord
+   1- parimeterized constructors ------- No we cannot make it or use it with friend keywoord as constructors are defined for sigle class and friends donot belong to single class
    2- default  constructors ------- No we cannot make it or use it with friend keywoord
    3-  copy constructors ------- No we cannot make it or use it with friend keywoord
    4- this pointer ----------- no we cannot use this pointer with friend keyword as they both serve different purposses
     ) 
-Static keyword(
+Static keyword( ---------file static.cpp
     1- constructors [no we cannot use them together]
     2- this [no we cannot use static with this keyword]
     3- function [ yes we can make as static function ]
@@ -40,12 +40,25 @@ overriding(
     4- friend function [no we cannot override friend function as they are not part of single class]
     5- static functions [yes we can override static variables and functions ]
     6- const functions [yes we can ]
-    7- operator overloading [ yes we can having same operator but different data type ]
+    7- operator overloading [ yes we can having same operator and data types should also be same ]
 )    
 
-virtual (
+virtual (file practice_virtal.cpp
     1- inheritance [yes we can do ]
     2- constructors [no we cannot use virtual and constructor word togather]
-    3- friends [no we cannot write them togather]
+    3- functions [yes we can]
+    4- friends [no we cannot write them togather]
+    5- static [no a static member cannot be virtual]
+    6- const [yes we can use them toagather ]
+    7- operator overloading [yes we cann override operator overloading]
+    8- overriding [yes we can do]
+)
+Templates(  -----------file------practice_templates.cpp
+    1- constructors [we can use inside]
+    2- friend function [yes]
+    3- static [yes we can use ]
+    4- const [yes we can]
+    5- inheritance -overriding - virtual [yes we can use ]
     
 )
+

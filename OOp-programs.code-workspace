@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "F:/python course"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"ostream": "cpp",
+			"xstring": "cpp",
+			"stack": "cpp"
+		}
+	}
+}

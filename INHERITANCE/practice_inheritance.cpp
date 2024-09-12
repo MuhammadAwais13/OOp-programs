@@ -4,7 +4,7 @@
 
 //===================================
 
-// constructor inheritance
+//constructor inheritance
 
 // #include<iostream>
 // using namespace std;
@@ -116,32 +116,32 @@
 
 //=============================================
 
-#include <iostream>
-using namespace std;
-class student
-{
-private:
-    int marks;
+// #include <iostream>
+// using namespace std;
+// class student
+// {
+// private:
+//     int marks;
 
-public:
-    const int reg=10;
-    student(){}
-};
+// public:
+//     const int reg=10;
+//     student(){}
+// };
 
-class child : public student
-{
-public:
-    void disp(){
-        cout<<reg;
-    }
+// class child : public student
+// {
+// public:
+//     void disp(){
+//         cout<<reg;
+//     }
    
     
-};
+// };
 
-int main()
-{
-    child C1;
-    C1.disp();
+// int main()
+// {
+//     child C1;
+//     C1.disp();
     
-    return 0;
-}
+//     return 0;
+// }
