@@ -6,30 +6,30 @@
 
 //constructor inheritance
 
-// #include<iostream>
-// using namespace std;
-// class student {
-//     private:
-//     int marks;
-//     public:
-//     student(int a):marks(a){cout<<"student called"<<endl;}
-//     student(){cout<<"student called C2"<<endl;}
+#include<iostream>
+using namespace std;
+class student {
+    private:
+    int marks;
+    public:
+    student(int a):marks(a){cout<<"student called"<<endl;}
+    student(){cout<<"student called C2"<<endl;}
 
-// };
-// class child: public student{
-//     public:
-//     using student::student; //
-//     };
+};
+class child: public student{
+    public:
+    using student::student; //
+    };
 
-// int main()
-// {// now we can inherit constructor of base class in derived class using the word 'using' like in 23 line now we have also inheritted constructor in child class now by that single line we are inheriting both constructors of base class
-// //
-//     child C1; //now base class constructor will be called as child has inherrited base class constructor construcm with no perimeters will be called
-//     child C2(34); // constructor with one perimeter will be called
-//     // if i create constructor of class child then it will never call constructors of base it will look for child class constructors
+int main()
+{// now we can inherit constructor of base class in derived class using the word 'using' like in 23 line now we have also inheritted constructor in child class now by that single line we are inheriting both constructors of base class
+//
+    child C1; //now base class constructor will be called as child has inherrited base class constructor construcm with no perimeters will be called
+    child C2(34); // constructor with one perimeter will be called
+    // if i create constructor of class child then it will never call constructors of base it will look for child class constructors
 
-//  return 0;
-// }
+ return 0;
+}
 
 //==============================================
 
